@@ -1,0 +1,77 @@
+.page-header {
+  background-color: var(--title-color);
+  border-bottom-color:#ECECEC;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+.header-container,
+.container-items {
+  display: flex;
+  align-items: center;
+} 
+.header-list {
+  display: flex;
+}
+.header-item:not(:last-child) {
+  margin-right: 50px;
+}
+.header-connect {
+  margin-left: auto;
+}
+.header-logo {
+  margin-right: 93px;
+  @include family-weight();
+  @include font (null, 26px, 1.19);
+  color: var(--header-color);
+}
+.logo-web-header {
+  @include family-weight();
+  @include font (null, 26px, 1.19);
+  color: #2196F3;
+}
+.header-link {
+  @include font (bold, 14px, 1.33);
+  letter-spacing: 0.02em;
+  color: var(--header-color);
+  transition: color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px; 
+  &:hover, &:focus {
+    color: var(--accent-color);
+  }
+}
+.current::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  background-color: var(--accent-color);
+  height: 4px;
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+}
+.header-contacts {
+  font-style: normal;
+  @include font (bold, 14px, 1.33);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus, &:hover {
+    color: var(--accent-color);
+  }
+}
+.header-email {
+  cursor: pointer;
+  fill: var(--color-text);
+  margin-right: 10px;
+  .header-contacts:hover &,
+  .header-contacts:focus & {
+    fill: var(--accent-color);
+  }
+}
+    

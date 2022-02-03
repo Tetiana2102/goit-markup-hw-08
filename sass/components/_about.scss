@@ -1,0 +1,36 @@
+.about {
+  padding-top: 0px;
+  padding-bottom: 94px;
+}
+.about__title {
+  @include font (bold, 36px, 1.16);
+  text-align: center;
+  color: var(--header-color);
+  padding-bottom: 50px;
+}
+.about__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-bottom: -30px;
+}
+.about__item {
+  width: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+.about__subtitle {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  @include font ($fw: null);
+  text-align: center;
+  align-items: center;
+  padding: 27px;
+  width: 100%;
+  text-transform: uppercase;
+  color: var(--title-color);
+  
+}

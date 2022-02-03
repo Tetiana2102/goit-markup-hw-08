@@ -1,0 +1,17 @@
+@mixin display-align() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+
+@mixin align-font() {
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+}
+@mixin family-weight() {
+  font-family: Raleway, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+

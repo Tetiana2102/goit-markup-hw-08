@@ -1,0 +1,63 @@
+.feature {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.feature-container {
+  display: flex;
+  justify-content: space-around;
+}
+.feature-item {
+  width: 270px;
+  height: 251px;
+  &::before {
+    display: block;
+    content: "";
+    height: 120px;
+    background-size: 70px 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    
+  }
+}
+.icon-antenna::before {
+  background-image: url("../images/antenna\ 1.svg");
+}
+.icon-clock::before {
+  background-image: url("../images/clock\ 1.svg");
+}
+.icon-diagram::before {
+  background-image: url("../images/diagram\ 1.svg");
+}
+.icon-astronaut::before {
+  background-image: url("../images/astronaut\ 1.svg");
+}
+.feature-title {
+  font-style: normal;
+  @include font ($fw: bold);
+  text-transform: uppercase;
+  color: var(--header-color);
+}
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.feature-text {
+  padding-top: 10px;
+  font-style: normal;
+  @include font (normal, 14px, 1.7);
+  color: var(--color-text);
+}
+.feature-item:not(:last-child) {
+  margin-right: 30px;
+}

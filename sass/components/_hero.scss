@@ -1,0 +1,62 @@
+
+.tagline {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-color:#2F303A;
+  text-align: center;
+  
+  
+  }
+  .overlay {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/overlay.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+  }
+
+.tagline-title {
+  @include font (900, 44px, 1.36);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--title-color);
+  display: flex;
+  max-width: 696px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tagline-btn {
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 0;
+  border-radius: 4px;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  @include font ($lh: 1.87);
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  display: flex;
+  padding: 10px 32px;
+  transition: background-color 250ms  cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover, &:focus {
+    background-color: #188CE8;
+  }
+}
+.tagline-btn-text {
+  @include align-font();
+  @include font (null, 16px, 1.87);
+  display: flex;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+}
+
