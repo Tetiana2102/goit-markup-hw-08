@@ -33,15 +33,47 @@ button {
 
 img {
   display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 .container {
-  width: 1200px;
+  width: 100%;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 section {
@@ -215,18 +247,12 @@ section {
 }
 
 .feature {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.feature-container {
-  display: flex;
-  justify-content: space-around;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .feature-item {
-  width: 270px;
-  height: 251px;
+  margin-bottom: 30px;
 }
 
 .feature-item::before {
@@ -238,7 +264,6 @@ section {
   background-position: center;
   background-color: #F5F4FA;
   border-radius: 4px;
-  margin-bottom: 30px;
 }
 
 .icon-antenna::before {
@@ -264,19 +289,7 @@ section {
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--header-color);
-}
-
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
+  padding-top: 30px;
 }
 
 .feature-text {
@@ -290,6 +303,16 @@ section {
 
 .feature-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.about-displey {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .about-displey {
+    display: inline;
+  }
 }
 
 .about {
@@ -341,11 +364,6 @@ section {
   padding-bottom: 0px;
 }
 
-.team-container {
-  max-width: 1600px;
-  height: 708px;
-}
-
 .team-text {
   font-weight: bold;
   align-items: center;
@@ -377,20 +395,49 @@ section {
   margin-bottom: 16px;
 }
 
-.team-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -30px;
-  margin-bottom: -30px;
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+  }
 }
 
 .card-item {
-  width: calc(100% / 4 - 30px);
-  margin-left: 30px;
+  width: 450px;
+  height: 622px;
   margin-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background: var(--title-color);
+}
+
+@media screen and (min-width: 768px) {
+  .card-item {
+    width: 354px;
+    height: 536px;
+    margin-left: 30px;
+    width: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card-item {
+    width: 270px;
+    height: 428px;
+    margin-left: 30px;
+    width: calc(100% / 4 - 30px);
+  }
 }
 
 .team-social-list {
@@ -429,16 +476,6 @@ section {
 
 .social-icon {
   fill: #AFB1B8;
-}
-
-.client {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.client-container {
-  width: 1200px;
-  height: 184px;
 }
 
 .client-text {
@@ -806,17 +843,25 @@ section {
 }
 
 .modal {
-  width: 528px;
-  min-height: 581px;
+  max-width: 450px;
+  width: 90vw;
+  max-height: 609px;
   background-color: var(--title-color);
   border-radius: 4px;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   scale: 1;
   transition: tranform 250ms;
   padding: 40px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    max-height: 581px;
+  }
 }
 
 .modal-close {
@@ -960,19 +1005,28 @@ section {
 }
 
 .check-text {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.71;
   color: #757575;
   padding-left: 8px;
   display: flex;
   align-content: center;
   align-items: center;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 1200px) {
+  .check-text {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 
 .check-text-second {
   text-decoration-line: underline;
   color: #2196F3;
   padding-left: 4px;
+  white-space: nowrap;
 }
 
 .check-text span {
@@ -990,6 +1044,7 @@ section {
 .policy-icon {
   fill: transparent;
   cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .policy-check:checked + .check-text span {

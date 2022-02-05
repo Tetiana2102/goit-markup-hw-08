@@ -1,14 +1,19 @@
 .feature {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  //padding-top: 94px;
+  //padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
 }
 .feature-container {
-  display: flex;
-  justify-content: space-around;
+ // display: flex;
+  //justify-content: space-around;
 }
+
 .feature-item {
-  width: 270px;
-  height: 251px;
+  //@at-root: 270px;
+  //height: 251px;
+  margin-bottom: 30px;
   &::before {
     display: block;
     content: "";
@@ -18,8 +23,6 @@
     background-position: center;
     background-color: #F5F4FA;
     border-radius: 4px;
-    margin-bottom: 30px;
-    
   }
 }
 .icon-antenna::before {
@@ -39,19 +42,9 @@
   @include font ($fw: bold);
   text-transform: uppercase;
   color: var(--header-color);
+  padding-top: 30px;
 }
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
+
 .feature-text {
   padding-top: 10px;
   font-style: normal;

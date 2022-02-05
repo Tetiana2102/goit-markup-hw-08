@@ -10,16 +10,23 @@
   transform: scale(1.2);
 }
 .modal {
-  width: 528px;
-  min-height: 581px;
+  max-width: 450px;
+  width: 90vw;
+  max-height: 609px;
   background-color: var(--title-color);
   border-radius: 4px;
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); scale: (1);
   transition: tranform 250ms;
   padding: 40px;
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+    max-height: 581px;
+  }
 }
 .modal-close {
   width: 30px;
@@ -135,17 +142,27 @@
 }
 
 .check-text {
-  @include font (null, 14px, 1.71);
+  @include font (null, 12px, 1.71);
   color: #757575;
   padding-left: 8px;
   display: flex;
   align-content: center;
   align-items: center;
+  white-space: nowrap;
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
 }
 .check-text-second {
   text-decoration-line: underline;
   color: #2196F3;
   padding-left: 4px;
+  white-space: nowrap;
+
 }
 .check-text span {
   content: "";
@@ -159,6 +176,7 @@
 .policy-icon {
   fill: transparent;
   cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .policy-check:checked + .check-text span {
   border: none;
