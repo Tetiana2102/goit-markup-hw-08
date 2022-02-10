@@ -34,7 +34,9 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: transparent;
   border-radius: 50%;
-  @include display-align();
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   position: absolute;
   top: 8px;

@@ -4,9 +4,24 @@
   }
   .filter__list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    // padding-bottom: 15px;
+    // flex-direction: column;
+    // justify-content: center;
+    // width: calc(100% / 3 - 30px);
+    // flex-basis: calc(100% / 3 - 30px);
+    @media screen and (min-width: 768px) {
+      // display: flex;
+      // justify-content: center;
+    // flex-direction: column;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: -30px;
+      justify-content: center;
+    }
   }
   .filter__button {
+    margin-bottom: 15px;
     @include font (500, 16px, 1.63);
     color: var(--header-color);
     background: #F5F4FA;
