@@ -27,7 +27,7 @@
 }
   .client-list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     //flex-direction: row;
     flex-wrap: wrap;
     flex-basis: calc(100% / 2 - 30px);
