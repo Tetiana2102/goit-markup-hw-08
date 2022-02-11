@@ -60,7 +60,7 @@ img {
 
 @media screen and (min-width: 480px) {
   .container {
-    width: 320px;
+    width: 480px;
   }
 }
 
@@ -261,7 +261,7 @@ section {
   justify-content: space-between;
 }
 
-.mob-menu-bottom {
+.mob-menu-btn {
   margin-top: auto;
 }
 
