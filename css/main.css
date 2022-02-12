@@ -104,16 +104,8 @@ section {
   display: flex;
 }
 
-@media screen and (min-width: 768px) {
-  .header-item-nav {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 78px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
-  .header-item-nav {
+  .header-list-contacts {
     display: flex;
   }
 }
@@ -156,13 +148,19 @@ section {
 }
 
 .header-logo {
-  margin-right: 276px;
+  margin-right: 100%;
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
   color: var(--header-color);
+}
+
+@media screen and (min-width: 480px) {
+  .header-logo {
+    margin-right: 276px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -291,6 +289,12 @@ section {
   border: 1px solid rgba(255, 255, 255, 0.652);
   background-color: transparent;
   fill: var(--color-text);
+}
+
+@media screen and (min-width: 480px) {
+  .menu-open-btn {
+    margin-left: auto;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -431,11 +435,23 @@ section {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--title-color);
-  width: 360px;
-  height: 84px;
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .tagline-title {
+    width: 360px;
+    height: 84px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .tagline-title {
+    width: 360px;
+    height: 84px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1029,7 +1045,7 @@ section {
 }
 
 .form-newsletter {
-  width: 100%;
+  width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
