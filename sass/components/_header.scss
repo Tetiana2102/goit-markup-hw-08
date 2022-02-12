@@ -72,7 +72,7 @@
   }
 }
 .header-logo {
-  margin-right:100%;
+  margin-right: 100px;
   @include family-weight();
   @include font (null, 26px, 1.19);
   color: var(--header-color);
