@@ -1143,6 +1143,13 @@ section {
 
 .filter {
   padding-bottom: 0px;
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .filter {
+    padding-top: 94px;
+  }
 }
 
 .filter__list {
@@ -1492,23 +1499,35 @@ section {
   line-height: 1.71;
   color: #757575;
   display: flex;
+  flex-wrap: wrap;
   align-content: center;
   align-items: center;
   white-space: nowrap;
 }
 
+@media screen and (min-width: 480px) {
+  .check-text {
+    flex-wrap: nowrap;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .check-text {
+    flex-wrap: nowrap;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .check-text {
+    flex-wrap: nowrap;
     font-size: 14px;
     line-height: 1.7;
   }
 }
 
 .check-text-second {
-  text-decoration-line: underline;
   color: #2196F3;
   padding-left: 4px;
-  white-space: nowrap;
 }
 
 .check-text span {

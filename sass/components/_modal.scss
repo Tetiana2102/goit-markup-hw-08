@@ -148,22 +148,29 @@
   color: #757575;
   // padding-left: 8px;
   display: flex;
+  flex-wrap: wrap;
   align-content: center;
   align-items: center;
   white-space: nowrap;
+  @media screen and (min-width: 480px) {
+    flex-wrap: nowrap;
+  }
+  
   @media screen and (min-width: 768px) {
+    flex-wrap: nowrap;
   }
   @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
     font-size: 14px;
     line-height: 1.7;
   }
 
 }
 .check-text-second {
-  text-decoration-line: underline;
+  // text-decoration-line: underline;
   color: #2196F3;
   padding-left: 4px;
-  white-space: nowrap;
+  // white-space: nowrap;
 
 }
 .check-text span {
